@@ -1,0 +1,31 @@
+<span>There is an issue that is resolved when the trackBy is uncommented out</span>
+<!-- the line below works -->
+<!-- <div *ngFor="let a of getArray(); trackBy: trackByFunc"> -->
+  <!-- the line below does not work, as soon as the mat-expansion-panel-header is added the page becomes unresponsive and memory consumption increases -->
+<div *ngFor="let a of getArray()">
+  <pre>{{ a | json }}</pre>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal data
+      </mat-panel-title>
+      <mat-panel-description>
+        Type your name and age
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</div>
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Personal data
+    </mat-panel-title>
+    <mat-panel-description>
+      Type your name and age
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
